@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="Acceuil" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="img/favicon.ico">
@@ -14,83 +14,128 @@
 </head>
 
 <body>
-    <header>
+    <header id="navbar">
         <link rel="image" href="img/android-chrome-192x192.png">
-        <h1>Ali Kus</h1>
+        <h1 id="logo">Ali Kus</h1>
         <nav>
             <ul>
+                <li><a href="#home">Accueil</a></li>
                 <li><a href="#about">Moi</a></li>
-                <li><a href="#projects">Projets</a></li>
+                <li><a href="#projects">Mes Projets</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="about">
+    <section id="home">
         <div class="container">
-            <div class="about-info">
-                <h2>Moi</h2>
-                <p>Binevenu dans mon portfolio! 
-                    Bonnes Visites !
-                </p>
-                <h3>Mon Projet academique </h3>
-                <p>J'envisage de faire un Bac+5 avec soit un master soit une école d'ingénieur après avoir finis mon BUT Informatique </p>
-                <h3>Hobbies</h3>
-                <p>J'aime faire du vélo </p>
-                <h3>Job</h3>
-                <p>I currently work part-time as a freelance web developer, taking on small projects to hone my skills
-                    and gain real-world experience.</p>
-                <h3>Mes Etudes</h3>
-                <p>J'ai obtenu un BAC Générale que j'ai passé avec un montion assez bien sûr les spécialités Maths et NSI </p>
-            </div>
-            <div class="about-image">
-                <img src="profile-pic.jpg" alt="Profile Picture">
+            <div class="about-info1">
+                <h2>Accueil</h2>
+                <p>Bienvenue sur la page d'accueil de mon portfolio!</p>
             </div>
         </div>
     </section>
+
+    <section id="about">
+        <link rel="image" href="img/imgg.jpg">
+        <div class="container">
+            <div class="about-info">
+                <h2>Moi</h2>
+                <p>Bienvenue dans mon portfolio! Je m'appelle Ali Kus, j'ai 19 ans et je suis actuellement en première année de BUT Informatique.</p>
+                <h3>Projets Académiques</h3>
+                <p>J'ai eu l'occasion de travailler sur plusieurs projets académiques passionnants. Voici quelques-uns d'entre eux :</p>
+                <ul>
+                    <li>Implémentation d'un besoin client et comparaison d'approches algorithmiques</li>
+                    <li>Installation de services réseau</li>
+                    <li>Exploitation d'une base de données</li>
+                    <!-- Ajoutez d'autres projets ici -->
+                </ul>
+            </div>
+            <div class="about-image">
+                <img src="img/profil.jpg" alt="Photo de profil">
+            </div>
+        </div>
+    </section>
+    
 
     <section id="projects">
         <h2>Projets</h2>
         <div class="project">
-            <h3>Portfolio Website</h3>
-            <p>A creative portfolio website showcasing my skills and projects. Built with HTML, CSS, and JavaScript.</p>
+            <h3>Implémentation d'un besoin client et comparaison d'approches algorithmiques</h3>
+            <p>Ce projet concernait la classification de dépêches en plusieurs catégories en fonction des mots qu'elles contenaient.</p>
+            <p>Langages utilisés : Java</p>
+            <a href="#">Plus d'informations</a>
         </div>
         <div class="project">
-            <h3>E-commerce Website</h3>
-            <p>An online store selling electronics, built with React.js, Node.js, and MongoDB.</p>
+            <h3>Installation de services réseau</h3>
+            <p>Installation d'un serveur Debian 12 équipé d'Apache, PostgreSQL et PHP.</p>
+            <p>Langages utilisés : Shell, PHP</p>
+            <a href="#">Plus d'informations</a>
         </div>
         <div class="project">
-            <h3>ToDo App</h3>
-            <p>A simple ToDo application to manage tasks. Developed with Vue.js and Firebase.</p>
+            <h3>Exploitation d'une base de données</h3>
+            <p>Création d'un rapport en anglais sur un ensemble de données extraites d'une base de données concernant les Nutriscores.</p>
+            <p>Langages utilisés : SQL, R</p>
+            <a href="#">Plus d'informations</a>
         </div>
-        <div class="project">
-            <h3>Blog Website</h3>
-            <p>A personal blog where I share my thoughts and experiences. Created with WordPress and customized with PHP
-                and CSS.</p>
-        </div>
+        <!-- Ajoutez d'autres projets ici -->
     </section>
+    
+    
 
     <footer>
         <section id="contact">
             <h2>Contactez Moi</h2>
-            <p>Vous pouvez me contacter par mon mail institutionel : </p>
-            <p> Ali.kus@etu.univ-grenoble-alpes.fr</p>
+            <p>Vous pouvez me contacter par mon mail institutionnel :</p>
+            <p><a href="mailto:Ali.kus@etu.univ-grenoble-alpes.fr">Ali.kus@etu.univ-grenoble-alpes.fr</a> </p>
             <ul>
                 <li><a href="https://www.linkedin.com/in/ali-kus-53ab75310/" target="_blank">LinkedIn</a></li>
                 <li><a href="https://github.com/Zedax05" target="_blank">GitHub</a></li>
             </ul>
-            <p><a href="#">&copy; Portfolio Ali KUS </a></p>
+            <p><a href="#">&copy; Portfolio Ali KUS</a></p>
             <p>2023-2024</p>
-            
-            <video width="320" height="240" speed="0,5" muted autoplay loop>
+            <video width="320" height="240" muted autoplay loop>
                 <source src="img/gif.mp4" type="video/mp4">
-                Your browser does not support the video tag.(change ton moteur de recherche ou met le a jour pour voir
+                Your browser does not support the video tag. (change ton moteur de recherche ou met le à jour pour voir
                 le contenu)
             </video>
         </section>
-
-
     </footer>
+
+    <script>
+        // When the user scrolls down 80px from the top of the document, move the logo to the right
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                document.getElementById("navbar").style.padding = "50px";
+                document.getElementById("logo").style.position = "fixed";
+                document.getElementById("logo").style.left = "10px";
+                document.getElementById("logo").style.top = "0px";
+            } else {
+                document.getElementById("navbar").style.padding = "20px";
+                document.getElementById("logo").style.position = "static";
+            }
+        }
+        window.addEventListener('scroll', function () {
+            var navbar = document.getElementById('navbar');
+            if (window.scrollY > 80) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            if (window.scrollY > 932) {
+                navbar.classList.add('scrolled2');
+            } else {
+                navbar.classList.remove('scrolled2');
+            }
+
+        });
+
+
+
+    </script>
 </body>
 
 </html>
