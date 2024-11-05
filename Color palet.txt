@@ -1,0 +1,5 @@
+1C3D5A  dark blue
+1C3D36  dark green
+B69A2B  golden  
+F0F0F0  white
+090A18  dark blue 
