@@ -507,13 +507,19 @@ li {
     color: #fff;
 }
 
+/* Footer with contact section */
+footer {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 #contact {
     background-image: url('img/contact.jpg');
     background-size: cover;
     background-position: center;
-    padding: 100px 0;
-    height: 100vh;
+    padding: 40px 20px;
     color: #fff;
+    margin-bottom: 0;
 }
 
 #contact h2{
@@ -537,10 +543,193 @@ li {
 
 #contact{
     backdrop-filter: blur(25px);
-    border-radius: 25px;
-    padding: 20px;
+    border-radius: 0;
+    padding: 40px 20px;
     width: auto;
     height: auto;
     text-align: center;
     color: #fff;
+}
+
+/* Responsive Design for Mobile (Portrait Mode: width < height) */
+@media screen and (orientation: portrait), screen and (max-width: 768px) {
+    /* Header and Navigation */
+    header {
+        padding: 10px;
+        font-size: medium;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin: 5px;
+    }
+
+    nav ul li a {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+
+    /* Sections */
+    section {
+        padding: 30px 15px;
+        margin-bottom: 20px;
+    }
+
+    /* Container */
+    .container {
+        margin: 50px auto;
+        padding: 0 15px;
+    }
+
+    /* Home Section */
+    #home {
+        height: 100vh;
+        padding: 80px 15px;
+    }
+
+    div .about-info1 {
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+
+    div .about-info1 h2 {
+        font-size: 1.5em;
+    }
+
+    div .about-info1 p {
+        font-size: 0.9em;
+    }
+
+    /* About Section */
+    #about {
+        height: auto;
+        min-height: 100vh;
+        padding: 80px 15px;
+    }
+
+    #about .container {
+        flex-direction: column;
+    }
+
+    div .about-info {
+        padding: 20px 15px;
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    div .about-info p {
+        font-size: 0.95em;
+        line-height: 1.6;
+    }
+
+    div .about-image img {
+        max-width: 60%;
+        margin: 20px auto;
+        display: block;
+    }
+
+    /* Skills Section */
+    #skills h2 {
+        font-size: 1.5em;
+    }
+
+    .skills-category h3 {
+        font-size: 1.2em;
+    }
+
+    .skills-category p {
+        font-size: 0.9em;
+    }
+
+    /* Experience Section */
+    #experience h2 {
+        font-size: 1.5em;
+    }
+
+    .experience-item h3 {
+        font-size: 1.2em;
+    }
+
+    .experience-item p {
+        font-size: 0.9em;
+    }
+
+    /* Projects Section */
+    #projects {
+        height: auto;
+        padding: 80px 15px;
+    }
+
+    #projects h2 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    .project {
+        padding: 20px 15px;
+        margin-bottom: 20px;
+    }
+
+    .project h3 {
+        font-size: 1.2em;
+        margin-bottom: 15px;
+    }
+
+    .project p,
+    .project li {
+        font-size: 0.9em;
+        line-height: 1.5;
+    }
+
+    .project-type {
+        font-size: 0.85em !important;
+    }
+
+    /* Contact/Footer Section */
+    #contact {
+        padding: 30px 15px;
+        margin-bottom: 0;
+    }
+
+    #contact h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    #contact p {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    #contact a {
+        font-size: 1rem;
+    }
+
+    footer ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Logo positioning on scroll for mobile */
+    #logo {
+        position: static !important;
+        left: auto !important;
+        top: auto !important;
+    }
+
+    #navbar.scrolled {
+        padding: 10px !important;
+    }
 }
