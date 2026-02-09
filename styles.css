@@ -520,6 +520,11 @@ footer {
     padding: 40px 20px;
     color: #fff;
     margin-bottom: 0;
+    backdrop-filter: blur(25px);
+    border-radius: 0;
+    width: auto;
+    height: auto;
+    text-align: center;
 }
 
 #contact h2{
@@ -538,17 +543,6 @@ footer {
     color: rgba(51, 77, 159, 0.471);
     text-shadow: 1px 1px 0 #b69a2b;
     font-size: 2rem;
-}
-
-
-#contact{
-    backdrop-filter: blur(25px);
-    border-radius: 0;
-    padding: 40px 20px;
-    width: auto;
-    height: auto;
-    text-align: center;
-    color: #fff;
 }
 
 /* Responsive Design for Mobile (Portrait Mode: width < height) */
@@ -572,7 +566,6 @@ footer {
     }
 
     nav ul li {
-        margin-right: 0;
         margin: 5px;
     }
 
