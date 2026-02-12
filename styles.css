@@ -352,6 +352,16 @@ section h2 {
     box-shadow: 0 5px 20px rgba(255, 193, 7, 0.4);
 }
 
+.submit-btn.submit-btn-success {
+    background: #4CAF50;
+    pointer-events: none;
+}
+
+.submit-btn.submit-btn-success:hover {
+    background: #4CAF50;
+    transform: none;
+}
+
 .copyright {
     margin-top: 50px;
     font-size: 1em;

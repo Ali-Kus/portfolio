@@ -252,20 +252,27 @@
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
+            const submitBtn = this.querySelector('.submit-btn');
             
             // Create mailto link with form data
             const subject = encodeURIComponent(`Message de ${name} via le portfolio`);
             const body = encodeURIComponent(`Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
             const mailtoLink = `mailto:ali.kus@etu.univ-grenoble-alpes.fr?subject=${subject}&body=${body}`;
             
-            // Open default email client
+            // Open email client
             window.location.href = mailtoLink;
             
-            // Show success message
-            alert('Votre client de messagerie va s\'ouvrir avec le message prêt à être envoyé !');
+            // Show success feedback
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = '✓ Message prêt à être envoyé !';
+            submitBtn.classList.add('submit-btn-success');
             
-            // Reset form
-            this.reset();
+            // Reset button and form after 3 seconds
+            setTimeout(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.classList.remove('submit-btn-success');
+                this.reset();
+            }, 3000);
         });
 
     </script>
