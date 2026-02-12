@@ -163,15 +163,53 @@
 
     <footer>
         <section id="contact">
-            <div>
-                <h2>Me contacter</h2>
-                <p>Vous souhaitez discuter d'une opportunité de stage ou d'un projet ? N'hésitez pas à me contacter !</p>
-                <p><strong>Email :</strong> <a href="mailto:ali.kus@etu.univ-grenoble-alpes.fr">ali.kus@etu.univ-grenoble-alpes.fr</a></p>
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/ali-kus-53ab75310/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                    <li><a href="https://github.com/Zedax05" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                </ul>
-                <p>&copy; 2026 Ali KUŞ – Tous droits réservés</p>
+            <div class="contact-container">
+                <h2>Contactez-moi</h2>
+                <p class="contact-intro">Intéressé par une collaboration ou un projet ? Je serais ravi d'échanger avec vous !</p>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <h3>Email</h3>
+                            <p><a href="mailto:ali.kus@etu.univ-grenoble-alpes.fr">ali.kus@etu.univ-grenoble-alpes.fr</a></p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <h3>Réseaux sociaux</h3>
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/in/ali-kus-53ab75310/" target="_blank" rel="noopener noreferrer" class="social-link linkedin">
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="https://github.com/Zedax05" target="_blank" rel="noopener noreferrer" class="social-link github">
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-wrapper">
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Nom</label>
+                                <input type="text" id="name" name="name" required placeholder="Votre nom">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required placeholder="votre.email@exemple.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Votre message..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">Envoyer le message</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <p class="copyright">&copy; 2026 Ali KUŞ – Tous droits réservés</p>
             </div>
         </section>
     </footer>
@@ -205,6 +243,29 @@
                 navbar.classList.remove('scrolled2');
             }
 
+        });
+
+        // Contact form handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Create mailto link with form data
+            const subject = encodeURIComponent(`Message de ${name} via le portfolio`);
+            const body = encodeURIComponent(`Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+            const mailtoLink = `mailto:ali.kus@etu.univ-grenoble-alpes.fr?subject=${subject}&body=${body}`;
+            
+            // Open default email client
+            window.location.href = mailtoLink;
+            
+            // Show success message
+            alert('Votre client de messagerie va s\'ouvrir avec le message prêt à être envoyé !');
+            
+            // Reset form
+            this.reset();
         });
 
     </script>
