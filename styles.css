@@ -60,9 +60,15 @@ nav ul li a {
     color: #b69a2b;
     text-decoration: none;
     padding: 10px 20px;
-    transition: background-color 3s ease, color 0.3s ease; 
-    text-shadow:-0.5px -0.5px  #fa3f01;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-shadow: -0.5px -0.5px 0 #fa3f01;
     
+}
+
+nav ul li a i,
+nav ul li a .nav-icon {
+    margin-right: 6px;
 }
 
 
